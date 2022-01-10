@@ -11,9 +11,9 @@ public class UserConfig {
     @Bean
     CommandLineRunner commandLineRunner(UserRepo userRepo) {
         return args -> {
-            User bes = new User("realemail@email.com");
+            User neo = new User("realemail@matrix.com", "Thomas", "Anderson");
 
-            userRepo.save(bes);
+            userRepo.save(neo);
 
         };
     }
