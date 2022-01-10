@@ -36,7 +36,7 @@ public class PostService {
     public void deletePost(Long postId){
         boolean exist = postRepo.existsById(postId);
         if(!exist){
-            throw new IllegalStateException(("post with id " + postId + "does not exist"));
+            throw new IllegalStateException(("post with id " + postId + " does not exist"));
         }
         postRepo.deleteById(postId);
     }
