@@ -1,7 +1,7 @@
 package kris.sanchez.imageshare.domain.post.controller;
 
 import kris.sanchez.imageshare.domain.post.model.Post;
-import kris.sanchez.imageshare.domain.post.service.PostService;
+import kris.sanchez.imageshare.domain.post.service.PostServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping(path = "api/v1/posts")
 public class PostController {
 
-   private PostService postService;
+   private PostServiceImpl postService;
 
     @Autowired
-    public PostController(PostService postService){
+    public PostController(PostServiceImpl postService){
        this.postService = postService;
    }
 
